@@ -70,13 +70,27 @@ const main = async () => {
     "BACKEND",
   ];
 
+  const programmingLanguagesAndFrameWorks = [
+    "JavaScript",
+    "PHP",
+    "Python",
+    "C++",
+    "Java",
+    "C",
+    "React",
+    "Drizzle",
+    "Prisma",
+    "Angular",
+    "Vue",
+    "Svelte",
+  ];
+
   const generateCommunityData = (count: number) => {
     return Array(count)
       .fill(null)
       .map(() => {
-        const name = chance.sentence({
-          words: chance.integer({ min: 4, max: 6 }),
-        });
+        const country = chance.country({ full: true });
+        const name = `${country} ${programmingLanguagesAndFrameWorks[chance.integer({ min: 0, max: programmingLanguagesAndFrameWorks.length - 1 })]} Users Group`;
         const slug = `${name
           .toLowerCase()
           .replace(/ /g, "-")
@@ -85,7 +99,7 @@ const main = async () => {
           id: nanoid(8),
           name: name,
           city: chance.city(),
-          country: chance.country({ full: true }),
+          country: country,
           coverImage: chance.avatar({ protocol: "https" }),
           description: chance.sentence({
             words: chance.integer({ min: 200, max: 1000 }),
@@ -176,7 +190,7 @@ ${chance.paragraph()}
   };
 
   const userData = generateUserData();
-  const communityData = generateCommunityData(10);
+  const communityData = generateCommunityData(30);
 
   const addUserData = async () => {
     const tags = sampleTags.map((title) => ({ title }));
@@ -273,7 +287,7 @@ ${chance.paragraph()}
         isEventOrganiser: user.id === allUsers[0].id,
       }));
 
-      await db.insert(membership).values(membershipData).returning();
+      //  await db.insert(membership).values(membershipData).returning();
       const eventsResponse = await db
         .insert(event)
         .values(eventData)
