@@ -1,0 +1,22 @@
+ALTER TABLE "BannedUsers" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "BannedUsers" ALTER COLUMN "updatedAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Comment" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Comment" ALTER COLUMN "updatedAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Event" ALTER COLUMN "eventDate" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Flagged" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Flagged" ALTER COLUMN "updatedAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Like" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Membership" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Notification" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Notification" ALTER COLUMN "updatedAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Post" ALTER COLUMN "published" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Post" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Post" ALTER COLUMN "updatedAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "RSVP" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Session" ALTER COLUMN "expires" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "Tag" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "User" ALTER COLUMN "emailVerified" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "User" ALTER COLUMN "createdAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "User" ALTER COLUMN "updatedAt" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "User" ALTER COLUMN "dateOfBirth" SET DATA TYPE timestamp(3) with time zone;--> statement-breakpoint
+ALTER TABLE "VerificationToken" ALTER COLUMN "expires" SET DATA TYPE timestamp(3) with time zone;
